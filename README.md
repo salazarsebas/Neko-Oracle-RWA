@@ -116,4 +116,4 @@ npm test --filter=@oracle-stocks/shared
 
 ## 📄 License
 
-[Add your license here]
+MIT License
