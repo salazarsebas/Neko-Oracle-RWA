@@ -114,6 +114,23 @@ npm test
 npm test --filter=@oracle-stocks/shared
 ```
 
+## 🏥 CI / Repo Health
+
+Before pushing, verify that the full CI pipeline passes locally:
+
+```bash
+npm ci && npm run lint && npm run check-types && npm run build && npm test
+```
+
+| Command              | What it does                                      |
+|----------------------|---------------------------------------------------|
+| `npm run lint`       | Runs ESLint across all workspaces via Turborepo   |
+| `npm run check-types`| Runs `tsc --noEmit` in all TypeScript workspaces  |
+| `npm run build`      | Builds all apps and packages via Turborepo        |
+| `npm test`           | Runs Jest tests in all workspaces                 |
+
+CI runs these same steps automatically on every push and PR to `main` and `develop`.
+
 ## 📄 License
 
 MIT License

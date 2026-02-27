@@ -8,6 +8,9 @@ import { TrimmedMeanAggregator } from './strategies/aggregators/trimmed-mean.agg
 import { HealthModule } from './health/health.module';
 import { MetricsModule } from './metrics/metrics.module';
 import { DebugModule } from './debug/debug.module';
+import { HttpModule } from '@nestjs/axios';
+import { EventEmitterModule } from '@nestjs/event-emitter';
+import { DataReceptionService } from './services/data-reception.service';
 
 @Module({
   imports: [
