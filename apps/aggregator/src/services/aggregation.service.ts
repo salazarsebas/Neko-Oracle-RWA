@@ -1,4 +1,4 @@
-import { Injectable, Logger, Optional, Inject } from '@nestjs/common';
+import { Injectable, Logger, Optional } from '@nestjs/common';
 import { NormalizedPrice } from '../interfaces/normalized-price.interface';
 import { AggregatedPrice } from '../interfaces/aggregated-price.interface';
 import { IAggregator } from '../interfaces/aggregator.interface';
