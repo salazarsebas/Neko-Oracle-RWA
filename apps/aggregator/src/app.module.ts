@@ -11,6 +11,7 @@ import { DebugModule } from './debug/debug.module';
 import { HttpModule } from '@nestjs/axios';
 import { EventEmitterModule } from '@nestjs/event-emitter';
 import { DataReceptionService } from './services/data-reception.service';
+import { PriceStreamProcessorService } from './services/price-stream-processor.service';
 
 @Module({
   imports: [
@@ -19,15 +20,13 @@ import { DataReceptionService } from './services/data-reception.service';
     HealthModule,
     MetricsModule,
     DebugModule,
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
     HttpModule,
     EventEmitterModule.forRoot(),
   ],
   controllers: [],
   providers: [
     DataReceptionService,
+    PriceStreamProcessorService,
     AggregationService,
     WeightedAverageAggregator,
     MedianAggregator,
